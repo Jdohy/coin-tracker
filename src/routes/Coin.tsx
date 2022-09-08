@@ -143,10 +143,9 @@ interface PriceData {
 
 const HomeLink = styled.div`
   position: fixed;
-  top: 30px;
-  right: 150px;
+  top: 20px;
+  left: 20px;
   color: black;
-  font-size: 35px;
   width: 50px;
   height: 50px;
   background-color: white;
@@ -156,10 +155,11 @@ const HomeLink = styled.div`
   align-items: center;
   border: none;
   margin-right: 20px;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: ${(props) => props.theme.boxShadow};
   a {
     position: absolute;
-    top: 11px;
+    top: 10px;
+    font-size: 35px;
   }
 `;
 
@@ -191,7 +191,7 @@ function Coin() {
       </HelmetProvider>
       <Header>
         <HomeLink>
-          <Link to="/">↩︎</Link>
+          <Link to="/">↩</Link>
         </HomeLink>
         <Title>
           {state?.name ? state.name : loading ? "Loading..." : infoData?.name}

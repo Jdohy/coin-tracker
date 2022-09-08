@@ -67,11 +67,12 @@ a{
 
 const Toggle = styled.button`
   position: fixed;
-  top: 30px;
+  margin: 0 auto;
+  top: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  right: 100px;
+  right: 20px;
   display: flex;
   font-size: 35px;
   font-weight: 600;
@@ -80,7 +81,7 @@ const Toggle = styled.button`
   background-color: white;
   border-radius: 50%;
   border: none;
-  box-shadow: 2px 2px 5px black;
+  box-shadow: ${(props) => props.theme.boxShadow};
   cursor: pointer;
 `;
 
